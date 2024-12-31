@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>United-იუნაიტედი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Manchester_United_FC_logo.svg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(204, 16, 46, 0.7); /* Manchester United Red with transparency */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 10px;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-box {
+            background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-box iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+        }
+
+        .video-box h3 {
+            margin: 10px;
+            font-size: 1.3em;
+        }
+
+        .video-box p {
+            color: #ddd;
+            font-size: 1em;
+        }
+
+        .footer {
+            background-color: rgba(204, 16, 46, 0.9); /* Dark Red */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .video-box iframe {
+                height: 200px;
+            }
+
+            .footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>მანჩესტერ იუნაიტედის ვიდეო გალერეა</h1>
+    </header>
+    <li><a href="Index.html">მთავარი მენიუ</a></li>
+    <div class="container">
+        <section class="video-container">
+            <!-- Video Box 1 -->
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/YPdjiIuT4Qg?si=49J1BzedYGjj_IdW" title="Manchester United Video 1" allowfullscreen></iframe>
+                <h3>ლეგენდარული გოლები</h3>
+                <p>იხილეთ მანჩესტერის საუკეთესო და ლეგენდარული გოლები</p>
+            </div>
+
+            <!-- Video Box 2 -->
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/oTgaI5QbNLc?si=IO7GpIbPrZl3-FqV" title="Manchester United Video 2" allowfullscreen></iframe>
+                <h3>იუნაიტედის ისტორიული ფინალი</h3>
+                <p>გავიხსენოთ ისტორიული 1999 წლის ჩემპიონთა ლიგის ფინალი, ამით ჩვენ ისტორიული ტრებლი მოვიგეთ
+                </p>
+            </div>
+
+            <!-- Video Box 3 -->
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/KUo-jEwQNmg?si=G6Nz2P2YECTNx9UA" title="Manchester United Video" allowfullscreen></iframe></iframe>
+                <h3>ოლდ ტრაფორდი</h3>
+                <p>ტური საიდანაც უფრო მეტს გაიგებთ ოლდ ტრაფორდის მანჩესტერის ისტორიულ სტადიონზე</p>
+            </div>
+
+            <!-- Video Box 4 -->
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/ypMxkkFa_DE?si=BRMv0XhfVkdjm7xe" title="Manchester United Video 4" allowfullscreen></iframe>
+                <h3>მანჩესტერის ისტორია</h3>
+                <p>იხილეთ მანჩესტერ იუნაიტედის მთლიანი ისტორია ერთ ვიდეოში</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Manchester United. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

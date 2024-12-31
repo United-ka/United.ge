@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>United-იუნაიტედი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .countdown {
+            font-size: 3em;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .countdown span {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .label {
+            font-size: 0.6em;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .game-info {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #FFD700;
+        }
+
+        .team-info {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #ff4500;
+        }
+
+        @media (max-width: 600px) {
+            .countdown {
+                font-size: 2em;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<li><a href="Index.html">მთავარი მენიუ</a></li>
+<body>
+
+    <h1>მომდევნო თამაში:</h1>
+
+    <div class="team-info">
+        <p>მანჩესტერ იუნაიტედი vs ლივერპული</p>
+        <p>პრემიერ ლიგა - 5 იანვარი, 2025</p>
+    </div>
+
+    <div class="countdown" id="countdown">
+        <span id="days"></span><span class="label">დღე</span>
+        <span id="hours"></span><span class="label">საათი</span>
+        <span id="minutes"></span><span class="label">წუთი</span>
+        <span id="seconds"></span><span class="label">წამი</span>
+    </div>
+
+    <div class="game-info">
+        <p>თამაშის თარიღი: <strong>5 იანვარი, 2025, 20:30 (UTC+4)</strong></p>
+        <p>სტადიონი: <strong>ოლდ ტრაფორდი</strong></p>
+    </div>
+
+    <script>
+        // Set the date of the next football game (Manchester United vs Liverpool)
+        const gameDate = new Date("January 5, 2025 20:30:00 GMT+4"); // UTC+4 (Georgia timezone)
+
+        // Update the countdown every 1 second
+        const countdown = setInterval(function () {
+            // Get the current date and time
+            const now = new Date().getTime();
+
+            // Calculate the time remaining
+            const timeRemaining = gameDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the results in the HTML
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+
+            // If the countdown is finished, display a message
+            if (timeRemaining <= 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "თამაშის დრო!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

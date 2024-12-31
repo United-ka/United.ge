@@ -1,0 +1,25 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family:Century;
+}
+
+
+li{
+    float: right;
+    list-style-type: none;
+    margin-top: 30px;
+    min-height: 400px;
+    margin-right: 60px;
+    font-size: 17px;
+    background-color: rgb(0, 0, 0);
+    font-size: x-large;
+}
+
+html{
+    background-color: rgb(0, 0, 0);
+}
+img{
+
+    float: left;
+}

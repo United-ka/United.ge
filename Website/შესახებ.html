@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ka"> <!-- Georgian language code -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United-იუნაიტედი</title>
+    <li><a href="Index.html">მთავარი მენიუ</a></li>
+    <style>
+         
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .content {
+            background-color: white;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            margin-top: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .history-section {
+            margin-bottom: 30px;
+        }
+
+        .history-section h2 {
+            color: #c8102e;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .history-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .fact-button {
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .fact-button:hover {
+            background-color: #900;
+        }
+
+        .additional-facts {
+            display: none;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .additional-facts h3 {
+            font-size: 1.5rem;
+            color: #900;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>მანჩესტერ იუნაიტედის ისტორია</h1>
+    </header>
+
+    <div class="content">
+        <div class="history-section">
+            <h2>მომავალის საწყისი</h2>
+            <p>მანჩესტერ იუნაიტედი 1878 წელს დაარსდა სახელწოდებით <strong>ნიუთონ ჰიუ</strong> (Newton Heath), მაგრამ 1902 წელს მას ეწოდა <strong>მანჩესტერ იუნაიტედი</strong>, მას შემდეგ, რაც კლუბმა ფინანსური კრიზისიდან გასასვლელად ბიზნესმენი <strong>ჯონ ჰერრინგემი</strong> შეიძინა.</p>
+        </div>
+
+        <div class="history-section">
+            <h2>სწრაფი წარმატება</h2>
+            <p>მანჩესტერ იუნაიტედი ინგლისური ფეხბურთის ისტორიაში ერთ-ერთ ყველაზე წარმატებულ კლუბად იქცა. 1908 და 1911 წლებში კლუბმა მოიგო <strong>ინგლისის ჩემპიონატი</strong>, ხოლო 1968 წელს მან პირველად მოიგო <strong>ჩემპიონთა თასი</strong>.</p>
+        </div>
+
+        <div class="history-section">
+            <h2>სერ ალექს ფერგიუსონი და ოქროს ხანა</h2>
+            <p>1990-იანი წლების დასაწყისში, მანჩესტერ იუნაიტედმა შეცვალა კლუბის ისტორია, როდესაც <strong>სერ ალექს ფერგიუსონი</strong> დაინიშნა მწვრთნელად. ფერგიუსონის ხელმძღვანელობით, კლუბმა განიცადა უმაღლესი წარმატებები, მათ შორის, <strong>პრემიერ ლიგის 13 გამარჯვება</strong>.</p>
+        </div>
+
+        <button class="fact-button" id="factButton">დამატებითი ფაქტები</button>
+
+        <div class="additional-facts" id="additionalFacts">
+            <h3>ტრადიციები და ტრაგედია</h3>
+            <p>1958 წელს კლუბი შევიდა უმძიმესი ტრაგედიაში, როდესაც გუნდი <strong>მიუნხენის ავარიაში</strong> დაიღუპა. ავარიის შედეგად, 8 ფეხბურთელი გარდაიცვალა. თუმცა, კლუბი ვერ დაამარცხა ტრაგედია და კიდევ უფრო წარმატებული გახდა შემდეგ წლებში.</p>
+
+            <h3>ამჟამინდელი წარმატებები</h3>
+            <p>დღეისათვის, მანჩესტერ იუნაიტედი კვლავ ერთ-ერთი ყველაზე წარმატებული კლუბია. ბოლო წლებში კლუბმა გარკვეული გამოწვევების მიუხედავად, მრავალი ტურნირი მოიგო და კვლავ სარეკორდო მაჩვენებლებით თამაშობს.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for showing and hiding additional facts
+        const factButton = document.getElementById('factButton');
+        const additionalFacts = document.getElementById('additionalFacts');
+
+        factButton.addEventListener('click', () => {
+            if (additionalFacts.style.display === 'none' || additionalFacts.style.display === '') {
+                additionalFacts.style.display = 'block';
+                factButton.innerText = 'დამალვა';
+            } else {
+                additionalFacts.style.display = 'none';
+                factButton.innerText = 'დამატებითი ფაქტები';
+            }
+        });
+    </script>
+
+
+</body>
+</html>
